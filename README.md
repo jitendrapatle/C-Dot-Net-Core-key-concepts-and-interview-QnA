@@ -17,7 +17,7 @@ static decimal CalculateTotal(decimal price, int quantity)
 Notice the return type (decimal) and parameter types (decimal, int). C# methods specify these types explicitly.
 
 --------------------------------------------------
-Classes and objects
+# Classes and objects
 public class Product
 {
     public int Id { get; set; };
