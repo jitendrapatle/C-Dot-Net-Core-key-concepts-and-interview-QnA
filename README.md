@@ -16,6 +16,35 @@ Layered System: The client does not need to know whether it is communicating dir
 Code on Demand: The server can optionally send executable code to the client, such as JavaScript. This is the only optional REST constraint and is less commonly used in typical REST API development.
 
 In my .NET Core and Angular applications, I primarily focus on stateless communication, resource-based endpoints, appropriate HTTP methods and status codes, and proper error handling.
+---------------------------------------------------
+# What is Content negotiation using web api
+Content negotiation in Web API is the process by which the client and server agree on the format of the request or response data.
+
+The client specifies its preferred response format using the `Accept` HTTP header, and the server determines which format it can return.
+
+For example, an Angular application may send `Accept: application/json`, and the ASP.NET Core Web API returns the response in JSON format.
+
+Similarly, the `Content-Type` header specifies the format of the data being sent in the request body, such as JSON.
+
+In ASP.NET Core Web API, content negotiation is commonly handled by the MVC formatters. By default, JSON is the primary response format. Other formats, such as XML, can be supported by configuring additional formatters.
+
+Content negotiation helps APIs support different clients and data formats without changing the underlying business logic.
+---------------------------------------------------
+# Explain how to secure API endpoints?
+To secure API endpoints in ASP.NET Core, I follow a layered security approach.
+
+First, I implement authentication using JWT bearer tokens or an identity provider such as Microsoft Entra ID to verify the user's identity.
+
+Second, I implement authorization using the `[Authorize]` attribute, role-based authorization, and policy-based authorization to ensure users can access only the resources and operations they are permitted to use.
+
+Third, I configure HTTPS to encrypt communication between Angular and the API, validate incoming request data on the server, and use proper exception handling to avoid exposing sensitive information.
+
+I also configure CORS to allow only trusted frontend origins, apply rate limiting to protect against excessive requests, and store secrets securely rather than hardcoding them.
+
+For sensitive operations, I enforce resource-level permissions, use parameterized database queries or Entity Framework Core, and log security-relevant events without recording passwords, access tokens, or other sensitive information.
+
+Finally, I ensure that authorization is enforced on the backend. Hiding a button or protecting an Angular route alone does not secure an API endpoint.
+---------------------------------------------------
 
 # C# Variables
 string productName = "Organic Wheat";
