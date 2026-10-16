@@ -1,5 +1,21 @@
 # C# -Dot-Net-Core-key-concepts-and-interview-QnA
 C# &amp; Dot Net Core key concepts and interview QnA
+#  What are the different rest principal we have?
+There are six main REST architectural constraints:
+
+Client-Server Architecture: The frontend and backend are separated. In my application, Angular acts as the client, and ASP.NET Core Web API acts as the server.
+
+Statelessness: Every HTTP request must contain all the information required to process it. The server does not maintain client session state between requests. For example, an Angular application sends a valid access token with each authenticated API request.
+
+Cacheability: API responses should indicate whether they can be cached. For example, product category data that changes infrequently can be cached to reduce unnecessary API calls.
+
+Uniform Interface: APIs should follow consistent conventions, such as resource-based URLs, standard HTTP methods, and appropriate status codes. For example, GET /api/products retrieves products, POST /api/products creates a product, and DELETE /api/products/10 deletes a product.
+
+Layered System: The client does not need to know whether it is communicating directly with the API server or through intermediate layers such as a load balancer, API gateway, or reverse proxy.
+
+Code on Demand: The server can optionally send executable code to the client, such as JavaScript. This is the only optional REST constraint and is less commonly used in typical REST API development.
+
+In my .NET Core and Angular applications, I primarily focus on stateless communication, resource-based endpoints, appropriate HTTP methods and status codes, and proper error handling.
 
 # C# Variables
 string productName = "Organic Wheat";
