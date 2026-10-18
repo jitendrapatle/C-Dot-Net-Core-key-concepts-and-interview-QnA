@@ -92,13 +92,15 @@ Here:
 
 Q. Why use decimal instead of double for a product price?
 Decimal represents base-10 fractions more appropriately for financial calculations. Double uses binary floating-point and can introduce rounding differences. Decimal is not a substitute for appropriate currency rounding rules.
-
+--------------------------------------------------------------------
 Q. What is a class, and what is an object?
 A class defines a type and its members. An object is an instance of that class with its own state.
 
+--------------------------------------------------------------------
 Q. What is the difference between a method parameter and a return type?
 Parameters are the inputs accepted by a method. The return type specifies the kind of value the method returns; void means it returns no value.
 
+--------------------------------------------------------------------
 
 Q. What is an interface in C#?
 An interface defines a contract: it specifies which operations a class must provide, without defining the implementation of those operations.
